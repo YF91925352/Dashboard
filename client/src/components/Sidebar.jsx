@@ -31,7 +31,7 @@ import {
 
 const navItems = [
   {
-    text: "Home Page",
+    text: "Dashboard",
     icon: <HomeOutlined />,
   },
   {

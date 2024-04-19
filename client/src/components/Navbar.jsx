@@ -13,15 +13,15 @@ import {
 import { useDispatch } from "react-redux";
 import { setMode } from "state";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
     <AppBar sx={{ position: "static", background: "none", boxShadow: "none" }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Left Side */}
-        <FlexBetween>
-          <IconButton onClick={() => console.log("open sidebar")}>
+        <FlexBetween sx={{ gap: "1rem" }}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
@@ -29,6 +29,7 @@ const Navbar = () => {
             borderRadius="10px"
             gap="3rem"
             p="0.1rem 1.5rem"
+            mr="0.5rem"
           >
             <InputBase placeholder="Search..." />
             <IconButton>
