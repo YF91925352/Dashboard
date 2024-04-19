@@ -24,7 +24,8 @@ const Layout = () => {
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <Box>
+      {/* let the left part is occupied by the navbar */}
+      <Box flexGrow={1}>
         <Navbar
           user={data || {}}
           isSidebarOpen={isSidebarOpen}
