@@ -16,7 +16,9 @@ const Layout = () => {
 
   return (
     <Box width="100%" height="100%" display={isAboveMobile ? "flex" : "block"}>
+      {/* If the data is undefined,send the {} */}
       <Sidebar
+        user={data || {}}
         isAboveMobile={isAboveMobile}
         drawerWidth="250px"
         isSidebarOpen={isSidebarOpen}
@@ -24,6 +26,7 @@ const Layout = () => {
       />
       <Box>
         <Navbar
+          user={data || {}}
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
