@@ -12,8 +12,6 @@ const Layout = () => {
   const userId = useSelector((state) => state.global.userId);
   const { data } = useGetUserQuery(userId);
 
-  console.log("🚀 ~ Layout ~ data:", data);
-
   return (
     <Box width="100%" height="100%" display={isAboveMobile ? "flex" : "block"}>
       {/* If the data is undefined,send the {} */}

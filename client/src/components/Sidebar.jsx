@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FlexBetween } from "./FlexBetween";
 import {
   ChevronLeft,
@@ -142,6 +142,8 @@ const Sidebar = ({
             </Box>
             <List>
               {navItems.map(({ text, icon }) => {
+                const lowercaseText = text.toLowerCase();
+
                 if (!icon) {
                   return (
                     <Typography
@@ -152,10 +154,13 @@ const Sidebar = ({
                     </Typography>
                   );
                 }
-                const lowercaseText = text.toLowerCase();
                 return (
                   <ListItem key={text} disablePadding>
                     <ListItemButton
+                      onClick={() => {
+                        setActive(lowercaseText);
+                        navigate(`/${lowercaseText}`);
+                      }}
                       sx={{
                         backgroundColor:
                           active === lowercaseText
@@ -165,10 +170,6 @@ const Sidebar = ({
                           active === lowercaseText
                             ? theme.palette.primary[600]
                             : theme.palette.secondary[100],
-                      }}
-                      onClick={() => {
-                        navigate(`/${lowercaseText}`);
-                        setActive(lowercaseText);
                       }}
                     >
                       <ListItemIcon
@@ -192,7 +193,7 @@ const Sidebar = ({
               })}
             </List>
           </Box>
-          <Box position="absolute" bottom="2rem">
+          <Box>
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
