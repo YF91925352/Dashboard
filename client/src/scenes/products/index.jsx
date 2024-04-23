@@ -82,6 +82,7 @@ const Product = ({
 };
 
 const Products = () => {
+  const theme = useTheme();
   const { data, isLoading } = useGetProductsQuery();
   const isNonMobile = useMediaQuery("(min-width: 1000px)");
 
@@ -126,7 +127,9 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <>Loading...</>
+        <Typography color={theme.palette.secondary[400]} variant="h4">
+          Loading...
+        </Typography>
       )}
     </Box>
   );
