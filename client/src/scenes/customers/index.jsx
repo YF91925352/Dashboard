@@ -8,7 +8,6 @@ import { useTheme } from "@emotion/react";
 const Customers = () => {
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
-  console.log("data", data);
 
   const columns = [
     {
@@ -60,6 +59,14 @@ const Customers = () => {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
+          initialState={{
+            pagination: {
+              paginationModel: {
+                pageSize: 10,
+              },
+            },
+          }}
+          pageSizeOptions={[10, 30, 50]}
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
