@@ -90,7 +90,7 @@ const Geography = () => {
                   {
                     on: "hover",
                     style: {
-                      itemTextColor: "#ffffff",
+                      itemTextColor: theme.palette.primary.main,
                       itemOpacity: 1.2,
                     },
                   },

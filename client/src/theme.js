@@ -63,7 +63,7 @@ export const tokensLight = reverseTokens(tokensDark);
 export const themeSettings = (mode) => {
   return {
     palette: {
-      /* if mode is darlk,the palette will display the first object */
+      /* if mode is darlk,the palettee */
       mode: mode,
       ...(mode === "dark"
         ? {
@@ -90,7 +90,7 @@ export const themeSettings = (mode) => {
             // palette values for light mode
             primary: {
               ...tokensLight.primary,
-              main: tokensDark.grey[50],
+              main: tokensDark.grey[300],
               light: tokensDark.grey[100],
             },
             secondary: {
