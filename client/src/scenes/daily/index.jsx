@@ -158,7 +158,7 @@ const Daily = () => {
                 direction: "column",
                 justify: false,
                 translateX: 50,
-                translateY: 0,
+                translateY: -20,
                 itemsSpacing: 0,
                 itemDirection: "left-to-right",
                 itemWidth: 80,
