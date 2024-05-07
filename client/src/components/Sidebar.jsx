@@ -11,6 +11,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+
 import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { FlexBetween } from "./FlexBetween";
@@ -29,6 +30,7 @@ import {
   PieChartOutlined,
   ChevronRightOutlined,
   SettingsOutlined,
+  EventAvailableOutlined,
 } from "@mui/icons-material";
 import profileImage from "assets/profile.jpeg";
 const navItems = [
@@ -87,6 +89,10 @@ const navItems = [
   {
     text: "Performance",
     icon: <TrendingUpOutlined />,
+  },
+  {
+    text: "Calender",
+    icon: <EventAvailableOutlined />,
   },
 ];
 

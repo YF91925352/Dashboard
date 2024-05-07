@@ -17,6 +17,7 @@ import Monthly from "scenes/monthly";
 import Breakdown from "scenes/breakdown";
 import Admin from "scenes/admin";
 import Performance from "scenes/performance";
+import Calendar from "scenes/calender";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -41,6 +42,7 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} />
+              <Route path="/calender" element={<Calendar />} />
             </Route>
           </Routes>
         </ThemeProvider>
