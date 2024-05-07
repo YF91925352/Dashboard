@@ -2,13 +2,15 @@ import React from "react";
 import { Box } from "@mui/material";
 import { useGetCustomersQuery } from "state/api";
 import Header from "components/Header";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { useTheme } from "@emotion/react";
-
+//import HighlightOffOutlinedIcon from "@mui/icons-material/HighlightOffOutlined";
 const Customers = () => {
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
-
+  /* const handleDelete = (id) => {
+    console.log(id + "deleted");
+  }; */
   const columns = [
     {
       field: "_id",
@@ -48,6 +50,18 @@ const Customers = () => {
       headerName: "Role",
       flex: 0.5,
     },
+    /*  {
+      field: "action",
+      headerName: "Action",
+      flex: 0.5,
+      renderCell: (params) => {
+        return (
+          <IconButton onClick={() => handleDelete(params.row._id)}>
+            <HighlightOffOutlinedIcon />
+          </IconButton>
+        );
+      },
+    }, */
   ];
 
   return (
@@ -55,6 +69,13 @@ const Customers = () => {
       <Header title="CUSTOMERS" subtitle="List of Customers" />
       <Box mt="40px" height="75vh">
         <DataGrid
+          slots={{ toolbar: GridToolbar }}
+          slotProps={{
+            toolbar: {
+              showQuickFilter: true,
+              quickFilterProps: { debounceMs: 500 },
+            },
+          }}
           loading={isLoading || !data}
           getRowId={(row) => row._id}
           rows={data || []}
@@ -67,6 +88,11 @@ const Customers = () => {
             },
           }}
           pageSizeOptions={[10, 30, 50]}
+          checkboxSelection
+          disableRowSelectionOnClick
+          disableColumnFilter
+          disableDensitySelector
+          disableColumnSelector
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",

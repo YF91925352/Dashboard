@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, useTheme } from "@mui/material";
 import { useGetAdminsQuery } from "state/api";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import Header from "components/Header";
 
 const Admin = () => {
@@ -85,6 +85,18 @@ const Admin = () => {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
+          slots={{ toolbar: GridToolbar }}
+          slotProps={{
+            toolbar: {
+              showQuickFilter: true,
+              quickFilterProps: { debounceMs: 500 },
+            },
+          }}
+          checkboxSelection
+          disableRowSelectionOnClick
+          disableColumnFilter
+          disableDensitySelector
+          disableColumnSelector
         />
       </Box>
     </Box>

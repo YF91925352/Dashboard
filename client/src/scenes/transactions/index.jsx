@@ -84,6 +84,9 @@ const Transactions = () => {
             color: theme.palette.secondary[100],
             borderTop: "none",
           },
+          "& .MuiDataGrid-toolbarContainer": {
+            flexDirection: "row-reverse",
+          },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
             color: `${theme.palette.secondary[200]} !important`,
           },
@@ -105,6 +108,7 @@ const Transactions = () => {
           slotProps={{
             toolbar: { searchInput, setSearchInput, setSearch },
           }}
+          checkboxSelection
         />
       </Box>
     </Box>
