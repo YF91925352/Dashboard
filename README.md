@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# MERN Stack Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Link to the website : [Click here] ((https://admin-dashboard-how0.onrender.com))
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This Full Stack Admin Dashboard utilizes a combination of MongoDB, Express Js, React, and Node.js to provide a comprehensive administrative interface. It includes advanced visualization tools and state management features, making it an ideal choice for displaying and managing complex datasets.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Themes**: Support for dark and light mode, allowing users to toggle based on preference.
+- **Data Visualization**: Uses Nivo Charts for dynamic and interactive data visualization.
+- **Responsive Tables**: Incorporates Material UI Data Grid for flexible and responsive table layouts.
+- **State Management**: Employs Redux Toolkit and Redux Toolkit Query for efficient state handling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Material UI**: A UI framework that provides React components for faster and easier web development.
+- **Nivo Charts**: A rich set of data visualization components built on top of D3.js.
+- **Redux Toolkit**: The official, opinionated, batteries-included toolset for efficient Redux development.
+- **Redux Toolkit Query**: Provides a powerful toolset for handling server-side data fetching.
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js**: A minimal and flexible Node.js web application framework.
+- **MongoDB**: A NoSQL database designed for modern application developers and for the cloud era.
+- **Mongoose**: An elegant mongodb object modeling for Node.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js
+- npm/yarn
+- MongoDB
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Setup and Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/YF91925352/Dashboard.git
+   cd Dashboard
+   ```
+2. **Install Backend Dependencies**
+   ```bash
+   cd server
+   npm install
+   ```
+3. **Install Frontend Dependencies**
+   ```bash
+   cd client
+   npm install
+   ```
+4. **Clone the repository**
+   ```bash
+   git clone https://github.com/YF91925352/Dashboard.git
+   cd Dashboard
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Start the Backend Server**
+   ```bash
+    cd server
+   npm run dev
+   ```
+2. **Run the Frontend**
+   ```bash
+   cd client
+   npm run start
+   ```
