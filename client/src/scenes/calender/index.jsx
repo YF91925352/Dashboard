@@ -53,11 +53,11 @@ const Calendar = () => {
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 25%"
-          backgroundColor={theme.palette.secondary[200]}
+          backgroundColor={theme.palette.primary.light}
           p="15px"
           borderRadius="4px"
         >
-          <Typography variant="h5" color={theme.palette.primary[500]}>
+          <Typography variant="h5" color={theme.palette.secondary.main}>
             Events
           </Typography>
           <List>
@@ -65,15 +65,19 @@ const Calendar = () => {
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: theme.palette.secondary[500],
+                  backgroundColor: theme.palette.secondary.light,
                   margin: "10px 2px",
                   borderRadius: "2px",
                 }}
               >
                 <ListItemText
-                  primary={event.title}
+                  primary={
+                    <Typography color={theme.palette.primary[400]}>
+                      {event.title}
+                    </Typography>
+                  }
                   secondary={
-                    <Typography>
+                    <Typography color={theme.palette.primary[400]}>
                       {formatDate(event.start, {
                         year: "numeric",
                         month: "short",

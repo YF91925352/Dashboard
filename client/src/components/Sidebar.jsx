@@ -132,7 +132,7 @@ const Sidebar = ({
           }}
         >
           <Box width="100%">
-            <Box m="1.5rem 2rem 1.5rem 3rem">
+            <Box m="1.5rem 2rem 1.5rem 2rem">
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center">
                   <Typography variant="h5" fontWeight="bold">
