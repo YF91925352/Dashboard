@@ -1,6 +1,6 @@
 # MERN Stack Admin Dashboard
+[Link to the website ](https://admin-dashboard-how0.onrender.com)
 
-Link to the website : [Click here] (https://admin-dashboard-how0.onrender.com)
 
 ## Overview
 
