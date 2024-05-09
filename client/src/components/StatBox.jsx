@@ -30,7 +30,6 @@ const StatBox = ({ title, value, increase, icon, description }) => {
       >
         {value}
       </Typography>
-
       <FlexBetween gap="1rem">
         <Typography
           variant="h5"

@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import Navbar from "components/Navbar";
 import Sidebar from "components/Sidebar";
 import React, { useState } from "react";
@@ -7,6 +7,7 @@ import { Outlet } from "react-router-dom";
 import { useGetUserQuery } from "state/api";
 
 const Layout = () => {
+  const theme = useTheme();
   const isAboveMobile = useMediaQuery("(min-width:600px)");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const userId = useSelector((state) => state.global.userId);
@@ -23,7 +24,10 @@ const Layout = () => {
         setIsSidebarOpen={setIsSidebarOpen}
       />
       {/* let the left part is occupied by the navbar */}
-      <Box flexGrow={1}>
+      <Box
+        flexGrow={1}
+        sx={{ backgroundColor: theme.palette.background.default }}
+      >
         <Navbar
           user={data || {}}
           isSidebarOpen={isSidebarOpen}

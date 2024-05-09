@@ -123,7 +123,7 @@ const Sidebar = ({
           sx={{
             width: drawerWidth,
             "& .MuiDrawer-paper": {
-              color: theme.palette.secondary[200],
+              color: theme.palette.secondary[500],
               backgroundColor: theme.palette.background.alt,
               boxSizing: "border-box",
               borderWidth: isAboveMobile ? 0 : "2px",
@@ -155,6 +155,7 @@ const Sidebar = ({
                     <Typography
                       key={text}
                       sx={{ m: "1.5rem 2rem 1.5rem 3rem" }}
+                      color={theme.palette.secondary.light}
                     >
                       {text}
                     </Typography>
@@ -174,8 +175,13 @@ const Sidebar = ({
                             : "transparent",
                         color:
                           active === lowercaseText
-                            ? theme.palette.primary[600]
+                            ? theme.palette.primary[400]
                             : theme.palette.secondary[100],
+                        "&:hover": {
+                          // Apply styles when hovered
+                          color: theme.palette.background.alt,
+                          backgroundColor: theme.palette.primary.main, // Change font color on hover
+                        },
                       }}
                     >
                       <ListItemIcon

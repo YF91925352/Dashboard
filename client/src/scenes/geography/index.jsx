@@ -15,7 +15,7 @@ const Geography = () => {
       <Box
         mt="40px"
         height="75vh"
-        border={`1px solid ${theme.palette.secondary[200]}`}
+        border={`1.5px solid ${theme.palette.primary.light}`}
         borderRadius="4px"
       >
         {data ? (
